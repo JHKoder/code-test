@@ -1,4 +1,4 @@
-package enumTest.enums.enumMapInitialization;
+package enumTest.enumMapInitialization.enums;
 
 import java.util.EnumMap;
 
