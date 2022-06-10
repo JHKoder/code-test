@@ -1,9 +1,10 @@
-package enumTest;
+package enumTest.enumMapInitialization;
 
-import enumTest.dto.User;
-import enumTest.enums.enumMapInitialization.A;
-import enumTest.enums.enumMapInitialization.C;
-import enumTest.role.Role;
+import enumTest.enumMapInitialization.dto.User;
+import enumTest.enumMapInitialization.enums.A;
+import enumTest.enumMapInitialization.enums.B;
+import enumTest.enumMapInitialization.enums.C;
+import enumTest.enumMapInitialization.role.Role;
 import java.io.IOException;
 
 public class Main {
@@ -11,23 +12,21 @@ public class Main {
     public static void main(String[] args) {
 
         long time = System.currentTimeMillis();
-        reportPerformanceFor(" ", time);
-        User userc = new User("A", Role.USER, C.init());
-        reportPerformanceFor(" ", time);
-
-
-        reportPerformanceFor(" ", time);
-        User usera = new User("A", Role.USER, A.init());
-        reportPerformanceFor(" ", time);
+        User userB = new User("", Role.USER, B.init());
+        User userA = new User("", Role.USER, A.init());
+        User userC = new User("", Role.USER, C.init());
+        testA(1);
+        testB(1);
 
         System.out.println();
+        System.out.println(" ============= 테스트 ===============");
         System.out.println();
+
 
         int count = Integer.MAX_VALUE;
         testA(count);
         System.out.println(" ");
         testB(count);
-
 
         try {
             System.in.read();
@@ -50,7 +49,7 @@ public class Main {
             userA.next();
         }
 
-       reportPerformanceFor(" A after", time);
+        reportPerformanceFor(" A after", time);
     }
 
     public static void testB(int count) {
@@ -72,8 +71,8 @@ public class Main {
 
         long nanoTime = System.nanoTime();
         double mem = usedMemory()
-            / (1024.0 * 1024.0);
-        System.out.println(msg + " (" + "nanoTime :" + (double)nanoTime/ 1000000000  + " , " + mem + "MB) ");
+                / (1024.0 * 1024.0);
+        System.out.println(msg + " (" + "nanoTime :" + (double) nanoTime / 1000000000 + " , " + mem + " MB) ");
 
     }
 
