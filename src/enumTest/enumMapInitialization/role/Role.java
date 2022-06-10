@@ -1,4 +1,4 @@
-package enumTest.role;
+package enumTest.enumMapInitialization.role;
 
 
 public enum Role {
