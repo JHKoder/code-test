@@ -1,8 +1,7 @@
-package enumTest.dto;
+package enumTest.enumMapInitialization.dto;
 
-import enumTest.enums.enumMapInitialization.A;
-import enumTest.enums.enumMapInitialization.ABC;
-import enumTest.role.Role;
+import enumTest.enumMapInitialization.enums.ABC;
+import enumTest.enumMapInitialization.role.Role;
 
 public class User<T extends ABC> {
     private String name;
