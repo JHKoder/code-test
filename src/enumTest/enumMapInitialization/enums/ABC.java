@@ -1,4 +1,4 @@
-package enumTest.enums.enumMapInitialization;
+package enumTest.enumMapInitialization.enums;
 
 public interface ABC {
     public <T> T next();
