@@ -27,7 +27,7 @@ public class Main {
         testA(count);
         System.out.println(" ");
         testB(count);
-
+//        testB(count);
         try {
             System.in.read();
             System.out.println("end");
@@ -44,7 +44,7 @@ public class Main {
         long time = System.currentTimeMillis();
 
         reportPerformanceFor(" A before", time);
-        for (int i = 0; i < 100; i++) {
+        for (int i = 0; i < count; i++) {
             User userA = new User("A", Role.USER, A.init());
             userA.next();
         }
@@ -62,7 +62,7 @@ public class Main {
             userC.next();
 
         }
-        reportPerformanceFor(" C after", time);
+        reportPerformanceFor(" C after ", time);
 
     }
 
