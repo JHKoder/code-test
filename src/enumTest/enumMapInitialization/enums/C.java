@@ -9,8 +9,6 @@ public enum C implements ABC {
     DEPARTURE,
     FINAL_DELIVERY,
     NONE_TRACKING;
-
-
     public C next() {
         return sequenceC.get(this);
     }
@@ -26,7 +24,6 @@ public enum C implements ABC {
         map.put(INSTRUCT, DEPARTURE);
         map.put(DEPARTURE, FINAL_DELIVERY);
         map.put(FINAL_DELIVERY, NONE_TRACKING);
-
         return map;
     }
 
